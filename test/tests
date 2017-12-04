@@ -1,0 +1,28 @@
+dirA
+dir_b
+DIRc
+d1rd
+-----
+text.txt
+random.stuff
+a.b
+.nope
+noext.
+file.2
+375.ext
+-----
+dir1
+ dir2
+ dir3
+  dir6
+   dir8
+dir4
+-----
+dir
+ file.txt
+ dir
+  file.h
+another_dir
+ dirr
+file.s
+-----
