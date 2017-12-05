@@ -7,7 +7,9 @@ const TEST_WORKING_DIRECTORY_PATH = `${__dirname}/_t`
 module.exports = {
   readTestCases,
   prepareTestDir,
-  cleanUpTestDir
+  cleanUpTestDir,
+  isFile,
+  isDir
 }
 
 function readTestCases() {
@@ -25,4 +27,12 @@ function cleanUpTestDir() {
   if (fs.existsSync(TEST_WORKING_DIRECTORY_PATH)) {
     fs.removeSync(TEST_WORKING_DIRECTORY_PATH)
   }
+}
+
+function isFile(path) {
+  return fs.ensureFileSync(`${TEST_WORKING_DIRECTORY_PATH}/${path}`)
+}
+
+function isDir(path) {
+  return fs.ensureDirSync(`${TEST_WORKING_DIRECTORY_PATH}/${path}`)
 }
