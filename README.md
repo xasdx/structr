@@ -1,5 +1,7 @@
 # structr
 
+[![Build Status](https://travis-ci.org/xasdx/structr.svg?branch=master)](https://travis-ci.org/xasdx/structr)
+
 > Utility that generates custom file and directory hierarchies
 
 ## Usage
