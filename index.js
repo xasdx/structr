@@ -42,3 +42,5 @@ function createDirectory(path) { fs.mkdirSync(path) }
 function createFile(path) { fs.writeFileSync(path, "") }
 
 function parseDescriptor(s) { return s.split("\n") }
+
+if (!module.parent) { generate(process.argv[2], process.argv[3]) }
