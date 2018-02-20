@@ -8,8 +8,7 @@ module.exports = {
   readTestCases,
   prepareTestDir,
   cleanUpTestDir,
-  isFile,
-  isDir
+  pathExists
 }
 
 function readTestCases() {
@@ -29,10 +28,6 @@ function cleanUpTestDir() {
   }
 }
 
-function isFile(path) {
-  return fs.ensureFileSync(`${TEST_WORKING_DIRECTORY_PATH}/${path}`)
-}
-
-function isDir(path) {
-  return fs.ensureDirSync(`${TEST_WORKING_DIRECTORY_PATH}/${path}`)
+function pathExists(path) {
+  return fs.pathExistsSync(`${TEST_WORKING_DIRECTORY_PATH}/${path}`)
 }
