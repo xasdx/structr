@@ -4,7 +4,7 @@
 
 > Utility that generates custom file and directory hierarchies
 
-## Usage
+## How to use it
 
 The script consumes a text based hierarchy descriptor as its first argument, which contains the directories and files the user wishes to create.
 

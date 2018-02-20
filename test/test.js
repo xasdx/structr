@@ -1,5 +1,3 @@
-/* global expect */
-
 let util = require("./util")
 let underTest = require("..")
 

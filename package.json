@@ -1,12 +1,26 @@
 {
   "name": "structr",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Utility to generate custom file and directory hierarchies",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "jest '^((?!c9).)*test/test.js$'"
+    "test": "mocha test/**/*.test.js --ui exports --recursive --reporter spec --check-leaks",
+    "cover": "nyc --check-coverage --lines 90 npm test",
+    "coveralls": "npm run cover && nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "fs-extra": "^4.0.2",
-    "jest": "^21.2.1"
-  }
+    "jest": "^21.2.1",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "mocha": "^5.0.0",
+    "nyc": "^11.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xasdx/structr.git"
+  },
+  "keywords": ["custom", "file", "directory", "structure", "generator", "nested", "hierarchy"],
+  "author": "xasdx",
+  "license": "MIT"
 }
