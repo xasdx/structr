@@ -3,12 +3,15 @@
   "version": "1.0.1",
   "description": "Utility to generate custom file and directory hierarchies",
   "main": "lib/index.js",
+  "bin": {
+    "structr": "./bin/structr.js"
+  },
   "scripts": {
     "test": "mocha test/test.js --ui exports --recursive --reporter spec --check-leaks",
     "cover": "nyc --check-coverage --lines 90 npm test",
     "coveralls": "npm run cover && nyc report --reporter=text-lcov | coveralls"
   },
-  "dependencies": {
+  "devDependencies": {
     "fs-extra": "^4.0.2",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
