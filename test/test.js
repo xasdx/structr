@@ -35,7 +35,9 @@ module.exports = {
       expect(util.pathExists("file.s")).to.be.true
       done()
     }, 1)
-  }
+  },
+  "uses default path when no prefix supplied": () => underTest.generate(""),
+  "rejects inputs with type different than string": () => expect(() => underTest.generate(true)).to.throw(),
 }
 
 function forEachLine(str, fn, done) {
