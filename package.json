@@ -1,6 +1,6 @@
 {
   "name": "node-structr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utility to generate custom file and directory hierarchies",
   "main": "lib/index.js",
   "bin": {

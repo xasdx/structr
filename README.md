@@ -10,9 +10,25 @@
 
 ## Use it
 
-The script consumes a text based hierarchy descriptor as its first argument, which contains the directories and files the user wishes to create.
+The script consumes a text-based hierarchy descriptor as its first argument, which contains the directories and files the user wishes to create. The second, optional argument might specify the target directory.
 
-Nesting can be expressed by space characters. See the example input below:
+So the following command:
+
+    structr "$(< desc)" "$(pwd)"
+
+will create the desired hierarchy at `pwd`:
+
+```
+Creating directory .../dir
+Creating file .../dir/file.txt
+Creating directory .../dir/dir
+Creating file .../dir/dir/file.h
+Creating directory .../another_dir
+Creating directory .../another_dir/favDir
+Creating file .../file.s
+```
+
+with `desc` being a descriptor file, containing the following text:
 
 ```
 dir
@@ -23,3 +39,5 @@ another_dir
  favDir
 file.s
 ```
+
+Note: nesting of files and folders is expressed by single space characters.
